@@ -7,5 +7,5 @@ module.exports = {
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "black"
   },
-  publicPath: process.env.NODE_ENV === "production" ? "" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/admin/" : "/admin/"
 };

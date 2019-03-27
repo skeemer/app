@@ -4,14 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <base href="<%= webpackConfig.output.publicPath %>">
     <link rel="shortcut icon" href="<%= webpackConfig.output.publicPath %>favicon.ico">
     <title>Directus</title>
 
-    <% if (process.env.NODE_ENV === "development") { %>
-    <link rel="stylesheet" href="/style.css" />
-    <% } else { %>
     <link rel="stylesheet" href="./style.css" />
-    <% } %>
   </head>
   <body>
     <noscript>
@@ -20,12 +17,7 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
 
-    <% if (process.env.NODE_ENV === "development") { %>
-    <script src="/config.js"></script>
-    <script src="/script.js"></script>
-    <% } else { %>
     <script src="./config.js"></script>
     <script src="./script.js"></script>
-    <% } %>
   </body>
 </html>
